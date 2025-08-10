@@ -4,11 +4,10 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP4CGX150DF31) Path("D:/Users/iybp/Downloads/mapeamento-0.2-alunos/mapeamento/pcihello_restored/") File("pcihello.sof") MfrSpec(OpMask(1));
+		Device PartName(EP4CGX150DF31) Path("D:/Users/lgpss/Desktop/Projeto-IHS/mapeamento/pcihello_restored/") File("pcihello.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 
 AlteraBegin;
 	ChainType(JTAG);
 AlteraEnd;
- 

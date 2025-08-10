@@ -1,3 +1,5 @@
+sudo apt-get install libsdl2-dev libsdl2-mixer-dev 
+
 Para mapear as notas do audio:
 gcc src/app_mp3.c include/kiss_fft.c -o criador_mapa -Iinclude -Ikissfft -lm
 

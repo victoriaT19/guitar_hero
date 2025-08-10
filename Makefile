@@ -12,16 +12,16 @@ INCDIR   := ./include
 # compiler and binutils
 PREFIX :=
 CC     := $(PREFIX)gcc
-AS     := $(PREFIX)nasm
+AS     := $(PREFIX)nasm   
 CXX    := $(PREFIX)g++
 OD     := $(PREFIX)objdump
 
 # flags
-CFLAGS   := -Wall -I $(INCDIR) -MMD -MP
-CXXFLAGS := -Wall -I $(INCDIR) -MMD -MP
+CFLAGS   := -Wall -I $(INCDIR) -I ./include -MMD -MP
+CXXFLAGS := -Wall -I $(INCDIR) -I ./include -MMD -MP
 ASMFLAGS := -f elf
 LDFLAGS  :=
-LIBS := -lSDL2 -lSDL2_mixer
+LIBS := -lSDL2 -lSDL2_mixer -lm
 
 ifeq ($(DEBUG),1)
 	BINDIR    := $(DBGDIR)
@@ -36,7 +36,7 @@ else
 endif
 
 # sources to compile
-ALLCSRCS   += $(shell find ./src -type f -name *.c)
+ALLCSRCS += $(shell find ./src -type f -name '*.c')
 ALLCXXSRCS += $(shell find ./src -type f -name *.cpp)
 ALLASMSRCS += $(shell find ./src -type f -name *.asm)
 

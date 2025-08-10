@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Mon Jul 14 14:59:01 2025
+Analysis & Synthesis Status : Successful - Thu Mar 13 14:08:29 2025
 Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 Revision Name : pcihello
 Top-level Entity Name : pcihello
 Family : Cyclone IV GX
-Total logic elements : 7,925
-    Total combinational functions : 6,329
-    Dedicated logic registers : 4,469
-Total registers : 4469
-Total pins : 116
+Total logic elements : 7,276
+    Total combinational functions : 5,772
+    Dedicated logic registers : 4,108
+Total registers : 4108
+Total pins : 128
 Total virtual pins : 0
 Total memory bits : 54,656
 Embedded Multiplier 9-bit elements : 0

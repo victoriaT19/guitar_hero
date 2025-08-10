@@ -38,7 +38,14 @@ module pcihello(
 	PCIE_WAKE_N,
 
 	//////////// Fan Control //////////
-	FAN_CTRL 
+	FAN_CTRL,
+
+	/// LCD Control
+	LCD_DATA,
+	LCD_EN,
+	LCD_RW,
+	LCD_RS,
+	LCD_ON,
 );
 
 //=======================================================
@@ -83,20 +90,31 @@ output		          		PCIE_WAKE_N;
 //////////// Fan Control //////////
 inout 		          		FAN_CTRL;
 
+/// LCD COntrol
 
+
+output [7:0] LCD_DATA;
+output LCD_EN;
+output LCD_RW;
+output LCD_RS;
+output LCD_ON;
+
+
+wire [31:0] lcdbus;
+wire [31:0] ldis;
+wire [31:0]	rdis;
+wire [31:0]	swi;
+wire [31:0]	bpush;
+wire [31:0]	rleds;
+wire [31:0]	gleds;
 //=======================================================
 //  REG/WIRE declarations
 //=======================================================
 
-wire [31:0] hexbus;
-wire [15:0] inbus;
-wire [31:0]hex_bus;
-wire [31:0]hex_bus2;
-wire [31:0]hex_bus3;
-wire [31:0]switches;
-wire [31:0]buttons;
-wire [31:0]green_led;
-wire [31:0]red_led;
+// wire [31:0] hexbus;
+// wire [15:0] inbus;
+
+
 //=======================================================
 //  Structural coding
 //=======================================================
@@ -108,37 +126,51 @@ wire [31:0]red_led;
         .pcie_hard_ip_0_powerdown_gxb_powerdown (PCIE_WAKE_N), //                         .gxb_powerdown
         .pcie_hard_ip_0_refclk_export           (PCIE_REFCLK_P),           //    pcie_hard_ip_0_refclk.export
         .pcie_hard_ip_0_pcie_rstn_export        (PCIE_PERST_N),
-        .hexport_external_connection_export     (hexbus),     // hexport_external_connection.export
-        .inport_external_connection_export      (inbus),       //
-		  .hex_display_external_connection_export (hex_bus),
-		  .hex_display2_external_connection_export (hex_bus2),
-		  .hex_display3_external_connection_export (hex_bus3),
-		  .switches_external_connection_export (switches),
-		  .buttons_external_connection_export (buttons),
-		  .green_led_external_connection_export (green_led),
-		  .red_led_external_connection_export(red_led)
-	 );
+        //.hexport_external_connection_export     (hexbus),     // hexport_external_connection.export
+        //.inport_external_connection_export      (inbus)       //  inport_external_connection.export
+			.pio_0_lcd_external_connection_export(lcdbus),
+			.pio_1_display_l_external_connection_export(ldis),
+			.pio_2_display_r_external_connection_export(rdis),
+			.pio_3_switches_external_connection_export(swi),
+			.pio_4_push_b_external_connection_export(bpush),
+			.pio_5_r_leds_external_connection_export(rleds),
+			.pio_6_g_leds_external_connection_export(gleds),
+    );
+	 
 
 
 	//////////// FAN Control //////////
-assign FAN_CTRL = 1'bz; // turn off FAN
-
-assign HEX0 = hex_bus[ 6: 0];
-assign HEX1 = hex_bus[14: 8];
-assign HEX2 = hex_bus[22:16];
-assign HEX3 = hex_bus[30:24];
-
-assign HEX4 = hex_bus2[ 6: 0];
-assign HEX5 = hex_bus2[14: 8];
-assign HEX6 = hex_bus3[6:0];
-assign HEX7 = hex_bus3[14:8];
-
-assign LEDG = green_led[8:0];
-
-assign LEDR = red_led[17:0];
-
-//falta botão e switch
+assign FAN_CTRL = 1'b1; // turn off FAN
+/*
+assign HEX0 = hexbus[ 6: 0];
+assign HEX1 = hexbus[14: 8];
+assign HEX2 = hexbus[22:16];
+assign HEX3 = hexbus[30:24];
 
 assign inbus = SW[15:0];
+*/
+
+assign LCD_DATA = lcdbus[7:0];
+assign LCD_EN = lcdbus[8];
+assign LCD_RW = lcdbus[9];
+assign LCD_RS = lcdbus[10];
+assign LCD_ON = lcdbus[11];
+
+assign HEX0 = ldis[6:0];
+assign HEX1 = ldis[13:7];
+assign HEX2 = ldis[20:14];
+assign HEX3 = ldis[27:21];
+
+assign HEX4 = rdis[6:0];
+assign HEX5 = rdis[13:7];
+assign HEX6 = rdis[20:14];
+assign HEX7 = rdis[27:21];
+
+assign bpush[3:0] = KEY;
+
+assign swi[17:0] = SW[17:0];
+
+assign LEDG = gleds[8:0];
+assign LEDR = rleds[17:0];
 
 endmodule
