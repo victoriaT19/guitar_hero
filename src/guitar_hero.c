@@ -35,7 +35,7 @@ void handle_sigint(int sig) {
 }
 
 //============================================== 
-// MAIN (Ponto de entrada do programa) 
+// MAIN
 //============================================== 
 int main() { 
     // Registra o handler para o Ctrl+C
@@ -144,7 +144,7 @@ int main() {
 
 
 //============================================== 
-// FUNÇÕES DO JOGO (TERMINAL) 
+// FUNÇÕES DO JOGO (TERMINAL)
 //============================================== 
 
 // Restaura as configurações originais do terminal 
@@ -235,7 +235,6 @@ void close_hardware(int fd) {
 void update_displays(int fd, int score, int errors) { 
     if (fd == -1) return; 
     
-    // --- Lógica Corrigida para a Pontuação (display esquerdo de 4 dígitos) ---
     // A pontuação agora é exibida corretamente, da esquerda para a direita (milhares, centenas, dezenas, unidades).
     uint32_t left_display_val = 0; 
     
@@ -254,7 +253,6 @@ void update_displays(int fd, int score, int errors) {
     ioctl(fd, WR_L_DISPLAY); 
     write(fd, &left_display_val, sizeof(left_display_val)); 
 
-    // --- Lógica Corrigida para os Erros (display direito de 4 dígitos) ---
     // Os erros agora são exibidos com até quatro casas.
     uint32_t right_display_val = 0; 
     
@@ -530,7 +528,7 @@ void render_game(GameState *state, double tempo_decorrido) {
         printf("Pressione qualquer tecla para sair...\n");
     }
     
-    // Certifique-se de que a tela não é atualizada se o jogo já terminou ou foi encerrado
+    // Tela não é atualizada se o jogo já terminou ou foi encerrado
     if (state->game_over || game_should_exit) {
         fflush(stdout);
         // Não faz nada para não piscar a tela
@@ -549,4 +547,5 @@ void finalizar_jogo(GameState *state) {
     Mix_CloseAudio(); 
     SDL_Quit(); 
     disableRawMode(); 
+
 } 
