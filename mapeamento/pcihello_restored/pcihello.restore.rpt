@@ -1,5 +1,5 @@
 Restore Archived Project report for pcihello
-Sun Aug 10 10:21:47 2025
+Mon Aug 11 10:44:20 2025
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -36,7 +36,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------+
 ; Restore Archived Project Summary                                        ;
 +---------------------------------+---------------------------------------+
-; Restore Archived Project Status ; Successful - Sun Aug 10 10:21:47 2025 ;
+; Restore Archived Project Status ; Successful - Mon Aug 11 10:44:20 2025 ;
 ; Revision Name                   ; pcihello                              ;
 ; Top-level Entity Name           ; pcihello                              ;
 ; Family                          ; Cyclone IV GX                         ;
@@ -46,22 +46,20 @@ refer to the applicable agreement for further details.
 +-----------------------------------+
 ; Restore Archived Project Messages ;
 +-----------------------------------+
-Info: Successfully restored '//wsl.localhost/Ubuntu/home/vt/guitar_hero_fpga/mapeamento/pcihello.qar' into the '//wsl.localhost/Ubuntu/home/vt/guitar_hero_fpga/mapeamento/pcihello_restored/' directory
+Info: Successfully restored 'C:/Users/vtaua/Downloads/Projeto-IHS-main (1)/Projeto-IHS-main/mapeamento/pcihello.qar' into the 'C:/Users/vtaua/Downloads/Projeto-IHS-main (1)/Projeto-IHS-main/mapeamento/pcihello_restored/' directory
 Info: Generated report 'pcihello.restore.rpt'
 Info (23030): Evaluation of Tcl script c:/intelfpga_lite/17.1/quartus/common/tcl/apps/qpm/qar.tcl was successful
-Info: Quartus Prime Shell was successful. 0 errors, 103 warnings
-    Info: Peak virtual memory: 4853 megabytes
-    Info: Processing ended: Sun Aug 10 10:21:47 2025
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:02
+Info: Quartus Prime Shell was successful. 0 errors, 104 warnings
+    Info: Peak virtual memory: 4841 megabytes
+    Info: Processing ended: Mon Aug 11 10:44:20 2025
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:01
 
 
 +----------------+
 ; Files Restored ;
 +----------------+
 ; File Name      ;
-+----------------+
-; pcihello.sdc   ;
 +----------------+
 
 
@@ -77,6 +75,7 @@ Info: Quartus Prime Shell was successful. 0 errors, 103 warnings
 ; pcihello.cmp                                                                                              ;
 ; pcihello.qpf                                                                                              ;
 ; pcihello.qsf                                                                                              ;
+; pcihello.sdc                                                                                              ;
 ; pcihello.v                                                                                                ;
 ; pcihello_assignment_defaults.qdf                                                                          ;
 ; pcihellocore.cmp                                                                                          ;

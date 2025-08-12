@@ -299,12 +299,15 @@ set_location_assignment PIN_AF4 -to LCD_EN
 set_location_assignment PIN_AF27 -to LCD_ON
 set_location_assignment PIN_AG3 -to LCD_RS
 set_location_assignment PIN_AJ3 -to LCD_RW
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name SEARCH_PATH db/ip/pcihellocore/ -tag from_archive
+set_global_assignment -name SEARCH_PATH db/ip/pcihellocore/submodules/ -tag from_archive
+set_global_assignment -name SEARCH_PATH pcihellocore/synthesis/ -tag from_archive
+set_global_assignment -name SEARCH_PATH pcihellocore/synthesis/submodules/ -tag from_archive
 set_global_assignment -name QSYS_FILE pcihellocore.qsys
+set_global_assignment -name VERILOG_FILE pcihello.v
 set_global_assignment -name SOURCE_FILE pcihellocore.cmp
 set_global_assignment -name SOURCE_FILE pcihello.cmp
 set_global_assignment -name SDC_FILE pcihello.sdc
-set_global_assignment -name VERILOG_FILE pcihello.v
 set_global_assignment -name SYSTEMVERILOG_FILE pcihellocore/synthesis/submodules/pcihellocore_rsp_xbar_mux.sv
 set_global_assignment -name SYSTEMVERILOG_FILE pcihellocore/synthesis/submodules/pcihellocore_rsp_xbar_demux.sv
 set_global_assignment -name VERILOG_FILE pcihellocore/synthesis/submodules/pcihellocore_pcie_hard_ip_0_altgx_internal.v
@@ -361,7 +364,4 @@ set_global_assignment -name VERILOG_FILE pcihellocore/synthesis/submodules/alter
 set_global_assignment -name VERILOG_FILE pcihellocore/synthesis/submodules/altera_avalon_sc_fifo.v
 set_global_assignment -name VERILOG_FILE pcihellocore/synthesis/pcihellocore.v
 set_global_assignment -name SDC_FILE pcihello.SDC
-set_global_assignment -name SEARCH_PATH db/ip/pcihellocore/ -tag from_archive
-set_global_assignment -name SEARCH_PATH db/ip/pcihellocore/submodules/ -tag from_archive
-set_global_assignment -name SEARCH_PATH pcihellocore/synthesis/ -tag from_archive
-set_global_assignment -name SEARCH_PATH pcihellocore/synthesis/submodules/ -tag from_archive
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

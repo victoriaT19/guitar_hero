@@ -3,7 +3,7 @@
 
 #include "ioctl_cmds.h"
 #include "mapeamento_audio.h"
-#include "device.h"
+//#include "device.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -19,6 +19,7 @@
 #include <stdint.h>
 #include <sys/time.h>
 #include <errno.h>
+#include <signal.h>
 
 
 #define MAX_NOTES 2000

@@ -1,5 +1,5 @@
 Flow report for pcihello
-Thu Mar 13 14:09:08 2025
+Mon Aug 11 11:04:44 2025
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -40,7 +40,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Thu Mar 13 14:09:02 2025       ;
+; Flow Status                        ; Successful - Mon Aug 11 11:04:35 2025       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; pcihello                                    ;
 ; Top-level Entity Name              ; pcihello                                    ;
@@ -68,7 +68,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/13/2025 14:07:32 ;
+; Start date & time ; 08/11/2025 11:00:49 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; pcihello            ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 238368719731899.174188565104444        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 91765004338.175492084926592            ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
@@ -99,11 +99,11 @@ refer to the applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:57     ; 1.0                     ; 5110 MB             ; 00:00:54                           ;
-; Fitter                    ; 00:00:24     ; 1.2                     ; 7048 MB             ; 00:00:30                           ;
-; Assembler                 ; 00:00:04     ; 1.0                     ; 4798 MB             ; 00:00:04                           ;
-; TimeQuest Timing Analyzer ; 00:00:05     ; 1.6                     ; 5166 MB             ; 00:00:04                           ;
-; Total                     ; 00:01:30     ; --                      ; --                  ; 00:01:32                           ;
+; Analysis & Synthesis      ; 00:02:43     ; 1.0                     ; 5103 MB             ; 00:02:31                           ;
+; Fitter                    ; 00:00:48     ; 1.1                     ; 6311 MB             ; 00:01:03                           ;
+; Assembler                 ; 00:00:07     ; 1.0                     ; 4795 MB             ; 00:00:06                           ;
+; TimeQuest Timing Analyzer ; 00:00:07     ; 1.4                     ; 5065 MB             ; 00:00:07                           ;
+; Total                     ; 00:03:45     ; --                      ; --                  ; 00:03:47                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -112,10 +112,10 @@ refer to the applicable agreement for further details.
 +---------------------------+------------------+------------+------------+----------------+
 ; Module Name               ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +---------------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis      ; HWC27            ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter                    ; HWC27            ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler                 ; HWC27            ; Windows 10 ; 10.0       ; x86_64         ;
-; TimeQuest Timing Analyzer ; HWC27            ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis      ; Vermithor        ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter                    ; Vermithor        ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler                 ; Vermithor        ; Windows 10 ; 10.0       ; x86_64         ;
+; TimeQuest Timing Analyzer ; Vermithor        ; Windows 10 ; 10.0       ; x86_64         ;
 +---------------------------+------------------+------------+------------+----------------+
 
 
