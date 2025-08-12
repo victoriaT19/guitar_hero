@@ -9,7 +9,7 @@
 
 	.
 	├── src
-	│   └── main.cpp
+	│   └── guitar_hero.c
 	├── include
 	│   ├── display.h
 	│   └── ioctl_cmds.h
@@ -33,3 +33,4 @@
 	├── Makefile
 	├── README.md
 	└── setup.sh
+
