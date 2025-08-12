@@ -1,7 +1,6 @@
 #include "guitar_hero.h" 
 
 // Tabela de consulta para os displays de 7 segmentos (ativo alto) 
-// Cada valor representa a combinação de segmentos para um dígito (0-9) 
 //  _a_ 
 // |   | 
 // f   b 
@@ -549,3 +548,4 @@ void finalizar_jogo(GameState *state) {
     disableRawMode(); 
 
 } 
+
