@@ -8,7 +8,7 @@
 #include <linux/uaccess.h>	/* copy_*_user functions */
 #include <linux/pci.h>		/* pci funcs and types */
 
-#include "../../include/ioctl_cmds.h"
+#include "../../src/ioctl_cmds.h"
 
 /* meta information */
 
@@ -331,4 +331,5 @@ static void __exit my_pci_remove(struct pci_dev *dev)
 }
 
 module_init(my_init);
+
 module_exit(my_exit);
